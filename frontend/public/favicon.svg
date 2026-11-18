@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Muzdyq">
+  <rect width="64" height="64" rx="14" fill="#0f766e"/>
+  <circle cx="48" cy="18" r="6" fill="#fbbf24"/>
+  <path d="M6 52 24 20l9 15 6-7 19 24Z" fill="#e8f7f3"/>
+  <path d="M24 20l9 15-6 3-3-5Z" fill="#9fe3d7"/>
+  <path d="M6 52h52L39 38l-7 8-8-4L6 52Z" fill="#062b27"/>
+</svg>

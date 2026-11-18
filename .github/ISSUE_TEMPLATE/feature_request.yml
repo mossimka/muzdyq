@@ -1,0 +1,67 @@
+name: Feature request
+description: Suggest a change that respects the project's product rules.
+title: "[feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Muzdyq deliberately excludes accounts, gamification, location tracking and
+        analytics. Read CONTRIBUTING.md and docs/ETHICS.md before proposing a
+        feature; explain how it avoids those patterns.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or scientific need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behaviour, not only the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Map / point panel
+        - Gallery / compare / timelapse
+        - Capture / ghost overlay
+        - Offline / Green mode
+        - Exports / open data
+        - Localisation
+        - Accessibility
+        - Backend API
+        - Deployment
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy, safety and inclusion impact
+      description: |
+        Does it collect new data, add a permission, change what is published,
+        create engagement pressure, or affect a specific group? If none, say so.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Product rules
+      options:
+        - label: This does not add accounts, gamification, location tracking or analytics.
+          required: true
+        - label: This does not encourage unsafe mountain behaviour.
+          required: true
+        - label: New user-facing text can be translated into en, ru and kk.
+          required: true

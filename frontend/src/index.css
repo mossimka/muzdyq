@@ -1,0 +1,410 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-bg: var(--mz-bg);
+  --color-surface: var(--mz-surface);
+  --color-surface-2: var(--mz-surface-2);
+  --color-ink: var(--mz-ink);
+  --color-muted: var(--mz-muted);
+  --color-line: var(--mz-line);
+  --color-primary: var(--mz-primary);
+  --color-primary-strong: var(--mz-primary-strong);
+  --color-on-primary: var(--mz-on-primary);
+  --color-primary-soft: var(--mz-primary-soft);
+  --color-sun: var(--mz-sun);
+  --color-sun-soft: var(--mz-sun-soft);
+  --color-danger: var(--mz-danger);
+  --color-ice: var(--mz-ice);
+  --font-sans: 'Inter var', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 10px 30px -12px rgb(4 40 34 / 0.22);
+}
+
+:root {
+  color-scheme: light;
+  --mz-bg: #f3f7f5;
+  --mz-surface: #ffffff;
+  --mz-surface-2: #eaf2ef;
+  --mz-ink: #0a2520;
+  --mz-muted: #4a625c;
+  --mz-line: #d3e2dd;
+  --mz-primary: #0f766e;
+  --mz-primary-strong: #0b5c56;
+  --mz-on-primary: #ffffff;
+  --mz-primary-soft: #d8efeb;
+  --mz-sun: #a34d00;
+  --mz-sun-soft: #fdeccd;
+  --mz-danger: #b42318;
+  --mz-ice: #dceef5;
+  --mz-map-overlay: rgb(255 255 255 / 0.92);
+}
+
+.dark {
+  color-scheme: dark;
+  --mz-bg: #071613;
+  --mz-surface: #0d2420;
+  --mz-surface-2: #12312b;
+  --mz-ink: #edf7f3;
+  --mz-muted: #a3bdb6;
+  --mz-line: #24453e;
+  --mz-primary: #2dd4bf;
+  --mz-primary-strong: #5eead4;
+  --mz-on-primary: #04211d;
+  --mz-primary-soft: #103b35;
+  --mz-sun: #fbbf24;
+  --mz-sun-soft: #3a2b0b;
+  --mz-danger: #fca5a5;
+  --mz-ice: #12333d;
+  --mz-map-overlay: rgb(7 22 19 / 0.92);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+.mz-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  line-height: normal;
+  border-bottom: 1px solid var(--mz-line);
+  background: color-mix(in srgb, var(--mz-surface) 90%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+@supports not (background: color-mix(in srgb, white 90%, transparent)) {
+  .mz-header {
+    background: var(--mz-surface);
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--mz-bg);
+  color: var(--mz-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--mz-primary);
+  color: var(--mz-on-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--mz-sun);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 9999;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--mz-primary);
+  color: var(--mz-on-primary);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.mz-card-shadow {
+  box-shadow: var(--shadow-soft);
+}
+
+/* MapLibre controls inside our theme */
+.maplibregl-ctrl-group {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}
+
+.dark .maplibregl-ctrl-group button {
+  background-color: var(--mz-surface);
+}
+
+.dark .maplibregl-ctrl-group button + button {
+  border-top-color: var(--mz-line);
+}
+
+.dark .maplibregl-ctrl-group button span {
+  filter: invert(1);
+}
+
+/* Monitoring point markers */
+.muzdyq-marker {
+  display: flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: 2px solid var(--mz-surface);
+  border-radius: 999px;
+  background: var(--mz-primary);
+  color: var(--mz-on-primary);
+  box-shadow: 0 6px 18px -6px rgb(0 0 0 / 0.55);
+  padding: 0 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.muzdyq-marker:hover,
+.muzdyq-marker:focus-visible {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.muzdyq-marker--water {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.muzdyq-marker--selected {
+  background: var(--mz-sun);
+  color: #1b1200;
+  outline: 3px solid var(--mz-surface);
+}
+
+.muzdyq-marker svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.muzdyq-marker-label {
+  display: none;
+  max-width: 130px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .muzdyq-marker-label {
+    display: inline;
+  }
+}
+
+/* Compare slider */
+.mz-compare {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  background: #081b18;
+  touch-action: none;
+}
+
+.mz-compare img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.mz-compare__before {
+  position: absolute;
+  inset: 0;
+}
+
+.mz-compare__divider {
+  position: absolute;
+  inset-block: 0;
+  width: 3px;
+  background: var(--mz-sun);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.35);
+}
+
+.mz-compare__handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--mz-sun);
+  color: #1b1200;
+  font-weight: 900;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.4);
+}
+
+.mz-compare input[type='range'] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: ew-resize;
+  opacity: 0;
+}
+
+/* Camera ghost overlay */
+.mz-ghost {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: opacity 120ms linear;
+}
+
+.mz-frame {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgb(255 255 255 / 0.9);
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 9999px rgb(0 0 0 / 0.16);
+  pointer-events: none;
+}
+
+.mz-frame::before,
+.mz-frame::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(255 255 255 / 0.85);
+  transform: translate(-50%, -50%);
+}
+
+.mz-frame::before {
+  width: 36px;
+  height: 2px;
+}
+
+.mz-frame::after {
+  width: 2px;
+  height: 36px;
+}
+
+/* Subtle topographic background for hero */
+.mz-topo {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgb(45 212 191 / 0.18), transparent 42%),
+    radial-gradient(circle at 85% 10%, rgb(251 191 36 / 0.15), transparent 38%),
+    repeating-radial-gradient(
+      ellipse at 70% 80%,
+      transparent 0 34px,
+      rgb(15 118 110 / 0.08) 34px 35px
+    );
+}
+
+/* Ant Design fine-tuning */
+.ant-btn {
+  font-weight: 600;
+}
+
+.ant-drawer-header {
+  border-bottom: 1px solid var(--mz-line);
+}
+
+.ant-drawer-body {
+  padding: 0;
+}
+
+.ant-typography {
+  color: inherit;
+}
+
+.ant-card {
+  background: var(--mz-surface);
+}
+
+.ant-select-selector,
+.ant-input,
+.ant-input-number,
+.ant-picker {
+  min-height: 44px;
+}
+
+.ant-notification-notice {
+  border-radius: 1rem;
+}
+
+/* Code blocks */
+.mz-code {
+  overflow-x: auto;
+  border: 1px solid var(--mz-line);
+  border-radius: 0.75rem;
+  background: var(--mz-surface-2);
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .mz-header,
+  .ant-layout-footer,
+  .skip-link,
+  .mz-print-hide {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .ant-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,73 @@
+name: New monitoring point
+description: Propose a safe, repeatable viewpoint for the Ile Alatau catalogue.
+title: "[point] "
+labels: ["point", "needs-field-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Points are scientific infrastructure, not photo spots. A proposal needs a
+        safe, legally accessible stand on a marked trail, a repeatable framing and
+        a source for the coordinates. **All coordinates remain unverified until a
+        glaciologist and a field visit confirm them.**
+  - type: input
+    id: name
+    attributes:
+      label: Working name
+      placeholder: "Tuyuksu Glacier — lower tongue view"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Glacier
+        - Water body
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Approximate location and coordinate source
+      description: Lat/lon, elevation, and how you obtained them (map, GPS, survey). Do not claim precision you do not have.
+      placeholder: "43.04, 77.08 · ~3450 m · OSM way ... / handheld GPS"
+    validations:
+      required: true
+  - type: textarea
+    id: viewpoint
+    attributes:
+      label: Viewpoint and heading
+      description: Where exactly should a person stand? What is in frame? Is it on a marked trail?
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety assessment
+      description: Hazards, closures, weather, water, ice, moraine, wildlife, access rules.
+    validations:
+      required: true
+  - type: textarea
+    id: science
+    attributes:
+      label: Scientific value
+      description: Why is this repeatable view useful? Any existing monitoring or publications?
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference image
+      description: Attach or link a photo you have the right to license under CC BY 4.0. Do not include identifiable people.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: The viewpoint is outside closed zones and reachable on a marked trail.
+          required: true
+        - label: I understand the coordinates are unverified until field-checked.
+          required: true
+        - label: The reference image is mine or openly licensed, and has no identifiable people without consent.
+          required: true
+        - label: I have read docs/ETHICS.md.
+          required: true

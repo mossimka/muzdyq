@@ -1,0 +1,83 @@
+# ---------------------------------------------------------------------------
+# Muzdyq — repository-wide ignores
+# ---------------------------------------------------------------------------
+
+# Environment and secrets ---------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+!backend/app/assets/*.onnx
+
+# Python --------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.python-version
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Runtime data (photos, thumbnails, SQLite dev database) --------------------
+backend/data/
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+data/
+media/
+
+# Node / frontend -----------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+frontend/.vite/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
+frontend/.playwright/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.local
+
+# Editors and OS ------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc ----------------------------------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+.cache/
+.DS_Store

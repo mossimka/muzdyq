@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or privacy report
+    url: https://github.com/muzdyq/muzdyq/security/advisories/new
+    about: Report vulnerabilities, leaked data or a photo of an identifiable person privately. Never post personal data publicly.
+  - name: Question or idea
+    url: https://github.com/muzdyq/muzdyq/discussions
+    about: Ask a question or discuss a design idea before opening an issue.

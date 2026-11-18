@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "region": "Ile Alatau (Zailiysky Alatau), Almaty region, Kazakhstan",
+  "_todo": "COORDINATES ARE APPROXIMATE AND UNVERIFIED. All points must be checked on site and with glaciologists before any public release. Viewpoint stand locations and headings also require field verification.",
+  "license": "CC-BY-4.0",
+  "points": [
+    {
+      "slug": "tuyuksu-glacier",
+      "type": "glacier",
+      "name_i18n": {
+        "en": "Tuyuksu Glacier",
+        "ru": "Ледник Туюксу",
+        "kk": "Тұйықсу мұздығы"
+      },
+      "description_i18n": {
+        "en": "The best-studied glacier of the Ile Alatau, monitored since 1958. This reference view looks up the Tuyuksu valley toward the glacier tongue. Repeat photos help everyone see the same place through the seasons.",
+        "ru": "Наиболее изученный ледник Иле Алатау: наблюдения ведутся с 1958 года. Контрольный вид направлен вверх по долине Туюксу к языку ледника. Повторные снимки помогают увидеть одно и то же место в разные сезоны.",
+        "kk": "Іле Алатауының ең зерттелген мұздығы, 1958 жылдан бері бақыланады. Бақылау көрінісі Тұйықсу аңғары бойымен мұздық тіліне қарай бағытталған. Қайталанған суреттер бір жердің маусымдар бойы қалай өзгеретінін көрсетеді."
+      },
+      "lat": 43.0417,
+      "lon": 77.0792,
+      "elevation_m": 3450,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "Mountain weather changes fast. Do not leave the marked trail for a photo. Glacier ice, snow bridges and moraine edges can collapse. Go with a guide and tell someone your route.",
+        "ru": "Горная погода меняется быстро. Не сходите с отмеченной тропы ради фотографии. Лёд, снежные мосты и края морены могут обрушиться. Идите с гидом и сообщите кому-нибудь свой маршрут.",
+        "kk": "Тау ауа райы тез өзгереді. Сурет үшін белгіленген жолдан шықпаңыз. Мұз, қар көпірлері және морена шеттері опырылуы мүмкін. Гидпен жүріңіз және маршрутыңызды біреуге айтыңыз."
+      },
+      "viewpoints": [
+        {
+          "id": "tuyuksu-glacier-v1",
+          "heading_deg": 178,
+          "reference_photo": "references/tuyuksu-glacier-v1.jpg",
+          "note_i18n": {
+            "en": "Stand at the marked rock ledge. Keep the glacier tongue in the centre and the skyline level.",
+            "ru": "Встаньте у отмеченной скальной площадки. Держите язык ледника в центре, а линию горизонта — ровно.",
+            "kk": "Белгіленген жартас алаңында тұрыңыз. Мұздық тілін ортаға, көкжиек сызығын тегіс ұстаңыз."
+          }
+        },
+        {
+          "id": "tuyuksu-glacier-v2",
+          "heading_deg": 198,
+          "reference_photo": "references/tuyuksu-glacier-v2.jpg",
+          "note_i18n": {
+            "en": "Lower moraine stand: include the left lateral moraine as the alignment anchor.",
+            "ru": "Нижняя моренная площадка: используйте левую боковую морену как ориентир выравнивания.",
+            "kk": "Төменгі морена алаңы: туралау тірегі ретінде сол жақ бүйір моренаны пайдаланыңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "big-almaty-lake",
+      "type": "water",
+      "name_i18n": {
+        "en": "Big Almaty Lake (BAO area)",
+        "ru": "Большое Алматинское озеро (район БАО)",
+        "kk": "Үлкен Алматы көлі (БАО маңы)"
+      },
+      "description_i18n": {
+        "en": "A high mountain reservoir that supplies Almaty and feeds the Bolshaya Almatinka river. The reference view records the lake colour, water level and snow on the surrounding slopes.",
+        "ru": "Высокогорное водохранилище, снабжающее Алматы и питающее реку Большая Алматинка. Контрольный вид фиксирует цвет озера, уровень воды и снег на окрестных склонах.",
+        "kk": "Алматыны сумен қамтамасыз ететін және Үлкен Алматы өзенін қоректендіретін биік таулы су қоймасы. Бақылау көрінісі көлдің түсін, су деңгейін және айналадағы беткейлердегі қарды тіркейді."
+      },
+      "lat": 43.0508,
+      "lon": 76.9853,
+      "elevation_m": 2511,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "The lake is a restricted water-supply zone. Stay on the road and official viewpoints. Do not enter the water or cross closed barriers.",
+        "ru": "Озеро находится в зоне ограниченного водоснабжения. Оставайтесь на дороге и официальных смотровых площадках. Не заходите в воду и не пересекайте закрытые ограждения.",
+        "kk": "Көл шектеулі сумен жабдықтау аймағында. Жолда және ресми бақылау алаңдарында болыңыз. Суға кірмеңіз және жабық бөгеттерден өтпеңіз."
+      },
+      "viewpoints": [
+        {
+          "id": "big-almaty-lake-v1",
+          "heading_deg": 286,
+          "reference_photo": "references/big-almaty-lake-v1.jpg",
+          "note_i18n": {
+            "en": "From the dam-side viewpoint, keep the lake horizon at one third from the top.",
+            "ru": "С площадки у плотины держите линию озера на одной трети от верхнего края.",
+            "kk": "Бөгет жағындағы алаңнан көл көкжиегін жоғарғы шетінен үштен бір бөлікте ұстаңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ayusay-viewpoint",
+      "type": "glacier",
+      "name_i18n": {
+        "en": "Ayusay Gorge viewpoint",
+        "ru": "Смотровая площадка в ущелье Аюсай",
+        "kk": "Аюсай шатқалындағы бақылау алаңы"
+      },
+      "description_i18n": {
+        "en": "A popular gorge with waterfalls, snowfields and a small glacier at its head. The fixed viewpoint frames both the waterfall and the seasonal snowfield so changes can be compared.",
+        "ru": "Популярное ущелье с водопадами, снежниками и небольшим ледником в верховьях. Фиксированная точка кадра включает водопад и сезонный снежник, чтобы изменения можно было сравнивать.",
+        "kk": "Сарқырамалары, қарлы алқаптары және жоғарғы жағындағы шағын мұздығы бар танымал шатқал. Бекітілген көрініс сарқырама мен маусымдық қарлы алқапты бірге қамтып, өзгерістерді салыстыруға мүмкіндік береді."
+      },
+      "lat": 43.1736,
+      "lon": 77.0164,
+      "elevation_m": 2850,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "Trails can be slippery and busy. Do not climb onto waterfall ledges or snowfields for a better angle. Keep children and dogs away from the edge.",
+        "ru": "Тропы могут быть скользкими и многолюдными. Не забирайтесь на уступы водопада или снежники ради лучшего ракурса. Держите детей и собак подальше от края.",
+        "kk": "Жолдар тайғақ және адам көп болуы мүмкін. Жақсырақ ракурс үшін сарқыраманың қияларына немесе қарлы алқаптарға шықпаңыз. Балалар мен иттерді шетінен алыс ұстаңыз."
+      },
+      "viewpoints": [
+        {
+          "id": "ayusay-viewpoint-v1",
+          "heading_deg": 162,
+          "reference_photo": "references/ayusay-viewpoint-v1.jpg",
+          "note_i18n": {
+            "en": "From the trail platform, frame the waterfall on the left and the snowfield on the right.",
+            "ru": "С площадки на тропе включите водопад слева, а снежник справа.",
+            "kk": "Жолдағы алаңнан сарқыраманы солға, қарлы алқапты оңға қарай қамтыңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "shymbulak-viewpoint",
+      "type": "glacier",
+      "name_i18n": {
+        "en": "Shymbulak viewpoint",
+        "ru": "Смотровая точка Шымбулак",
+        "kk": "Шымбұлақ бақылау нүктесі"
+      },
+      "description_i18n": {
+        "en": "Above the Shymbulak resort, a short walk leads to a view of the upper valley and its glaciers. This series is reachable for many visitors and records the snowline across the year.",
+        "ru": "Выше курорта Шымбулак короткая прогулка ведёт к виду на верхнюю часть долины и её ледники. Эта серия доступна многим посетителям и фиксирует положение снеговой линии в течение года.",
+        "kk": "Шымбұлақ курортынан жоғары қысқа серуен жоғарғы аңғар мен оның мұздықтарына көрініс ашады. Бұл серия көптеген қонақтарға қолжетімді және жыл бойы қар шекарасын тіркейді."
+      },
+      "lat": 43.1289,
+      "lon": 77.0811,
+      "elevation_m": 3200,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "This is high altitude: turn back if you feel dizzy or breathless. Do not cross ski-area closures or walk on summer snow without proper gear.",
+        "ru": "Это большая высота: поверните назад при головокружении или нехватке воздуха. Не пересекайте закрытые зоны курорта и не ходите по летнему снегу без снаряжения.",
+        "kk": "Бұл биік таулы аймақ: басыңыз айналса немесе деміңіз тарылса, кері қайтыңыз. Курорттың жабық аймақтарынан өтпеңіз және жазғы қарда құралсыз жүрмеңіз."
+      },
+      "viewpoints": [
+        {
+          "id": "shymbulak-viewpoint-v1",
+          "heading_deg": 212,
+          "reference_photo": "references/shymbulak-viewpoint-v1.jpg",
+          "note_i18n": {
+            "en": "Use the cable-car pylon on the right edge as the alignment anchor.",
+            "ru": "Используйте опору канатной дороги у правого края как ориентир выравнивания.",
+            "kk": "Туралау тірегі ретінде оң жақ шеттегі аспалы жол тіреуін пайдаланыңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "talgar-glacier",
+      "type": "glacier",
+      "name_i18n": {
+        "en": "Talgar Glacier area",
+        "ru": "Район Талгарского ледника",
+        "kk": "Талғар мұздығы ауданы"
+      },
+      "description_i18n": {
+        "en": "The Talgar valley holds large glaciers that feed rivers used by foothill villages. The viewpoint is far from the ice edge, which keeps the photographer safe while still showing the glacier tongue.",
+        "ru": "В Талгарской долине находятся крупные ледники, питающие реки предгорных сёл. Точка съёмки расположена далеко от края льда: это безопасно для фотографа и при этом показывает язык ледника.",
+        "kk": "Талғар аңғарында тау бөктеріндегі ауылдар пайдаланатын өзендерді қоректендіретін үлкен мұздықтар бар. Түсіру нүктесі мұз шетінен алыс орналасқан: бұл фотографқа қауіпсіз, әрі мұздық тілін көрсетеді."
+      },
+      "lat": 43.05,
+      "lon": 77.3,
+      "elevation_m": 3500,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "Remote terrain with no mobile coverage in places. Carry water, a map and warm layers; tell someone your return time. Never approach the ice alone.",
+        "ru": "Отдалённая местность, местами нет мобильной связи. Возьмите воду, карту и тёплую одежду; сообщите время возвращения. Никогда не подходите ко льду в одиночку.",
+        "kk": "Кейбір жерлерде ұялы байланыс жоқ шалғай аймақ. Су, карта және жылы киім алыңыз; қайтатын уақытыңызды біреуге айтыңыз. Мұзға ешқашан жалғыз жақындамаңыз."
+      },
+      "viewpoints": [
+        {
+          "id": "talgar-glacier-v1",
+          "heading_deg": 171,
+          "reference_photo": "references/talgar-glacier-v1.jpg",
+          "note_i18n": {
+            "en": "From the meadow terrace, keep the glacier tongue centred and the ridge line level.",
+            "ru": "С луговой террасы держите язык ледника в центре, а линию хребта — ровно.",
+            "kk": "Шалғынды террасадан мұздық тілін ортаға, жота сызығын тегіс ұстаңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kimasar-lakes",
+      "type": "water",
+      "name_i18n": {
+        "en": "Kimasar Lakes",
+        "ru": "Кимасарские озёра",
+        "kk": "Қимасар көлдері"
+      },
+      "description_i18n": {
+        "en": "Small alpine lakes and wet meadows below the Kimasar ridge. They are sensitive to snowmelt timing and are easy to photograph from a safe, fixed spot on the trail.",
+        "ru": "Небольшие высокогорные озёра и сырые луга под хребтом Кимасар. Они чувствительны к срокам снеготаяния, и их легко снимать с безопасной фиксированной точки на тропе.",
+        "kk": "Қимасар жотасының астындағы шағын биік таулы көлдер мен ылғалды шалғындар. Олар қар еру уақытына сезімтал және жолдағы қауіпсіз бекітілген нүктеден түсіруге ыңғайлы."
+      },
+      "lat": 43.1458,
+      "lon": 77.0972,
+      "elevation_m": 3100,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "Wet ground and loose stones. Stay on the trail; lake banks can be unstable. Do not drink untreated water from the lakes.",
+        "ru": "Сырой грунт и осыпающиеся камни. Оставайтесь на тропе: берега озёр могут быть неустойчивыми. Не пейте воду из озёр без очистки.",
+        "kk": "Ылғалды топырақ және борпылдақ тастар. Жолда болыңыз: көл жағалауы тұрақсыз болуы мүмкін. Көл суын тазартпай ішпеңіз."
+      },
+      "viewpoints": [
+        {
+          "id": "kimasar-lakes-v1",
+          "heading_deg": 248,
+          "reference_photo": "references/kimasar-lakes-v1.jpg",
+          "note_i18n": {
+            "en": "From the lake-outlet rock, include the small island in the lower third.",
+            "ru": "С камня у истока озера включите небольшой остров в нижнюю треть кадра.",
+            "kk": "Көл шығатын жердегі тастан шағын аралды кадрдың төменгі үштен біріне қосыңыз."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "issyk-lake",
+      "type": "water",
+      "name_i18n": {
+        "en": "Issyk Lake",
+        "ru": "Иссыкское озеро",
+        "kk": "Есік көлі"
+      },
+      "description_i18n": {
+        "en": "A mountain lake formed by a prehistoric landslide, a short drive from Almaty. This unverified demo point shows how the platform can also track lower-elevation water bodies.",
+        "ru": "Горное озеро, образованное доисторическим оползнем, недалеко от Алматы. Эта непроверенная демонстрационная точка показывает, как платформа может отслеживать и водоёмы на меньшей высоте.",
+        "kk": "Алматыға жақын жерде ежелгі көшкіннен пайда болған тау көлі. Бұл тексерілмеген демонстрациялық нүкте платформаның төменірек биіктіктегі су нысандарын да бақылай алатынын көрсетеді."
+      },
+      "lat": 43.2417,
+      "lon": 77.475,
+      "elevation_m": 1760,
+      "coords_verified": false,
+      "safety_note_i18n": {
+        "en": "A busy tourist lake with cold water. Stay behind the shore barriers and supervise children. Do not swim in the designated no-swim zone.",
+        "ru": "Популярное туристическое озеро с холодной водой. Оставайтесь за береговыми ограждениями и следите за детьми. Не купайтесь в зоне, где купание запрещено.",
+        "kk": "Суық сулы, туристер көп баратын көл. Жағалау бөгеттерінің артында болыңыз және балаларды қадағалаңыз. Шомылуға тыйым салынған аймақта шомылмаңыз."
+      },
+      "viewpoints": [
+        {
+          "id": "issyk-lake-v1",
+          "heading_deg": 207,
+          "reference_photo": "references/issyk-lake-v1.jpg",
+          "note_i18n": {
+            "en": "From the northern shore platform, keep the far beach centred and the waterline level.",
+            "ru": "С северной береговой площадки держите дальний пляж в центре, а линию воды — ровно.",
+            "kk": "Солтүстік жағалау алаңынан алыстағы жағажайды ортаға, су сызығын тегіс ұстаңыз."
+          }
+        }
+      ]
+    }
+  ]
+}

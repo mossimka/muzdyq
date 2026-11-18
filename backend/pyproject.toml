@@ -1,0 +1,33 @@
+[project]
+name = "muzdyq-backend"
+version = "0.1.0"
+description = "Muzdyq API — open citizen-science photo archive for Ile Alatau"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["venv", "alembic/versions", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "C4", "SIM"]
+ignore = [
+    "B008",  # FastAPI Depends()/File() in defaults is the framework idiom
+    "E501",  # formatting is handled by the formatter; long URLs are fine
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "B011"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["app/seed.py"]
