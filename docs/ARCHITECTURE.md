@@ -5,31 +5,19 @@ a PostgreSQL/PostGIS database with a media volume. There is no identity provider
 no queue broker and no analytics service — deliberately.
 
 ```mermaid
-flowchart TB
-    subgraph Client["Browser (installable PWA)"]
-        UI["React 19 + TypeScript<br/>Ant Design · MapLibre · react-i18next"]
-        Q["IndexedDB queue<br/>src/lib/queue.ts"]
-        IMG["Canvas pipeline<br/>resize · EXIF strip · face pixelation"]
-        SW["Service worker<br/>public/sw.js"]
-        UI --> IMG --> Q
-        UI <--> SW
-    end
-
-    subgraph Server["Docker Compose host"]
-        NG["nginx 1.27<br/>static files + /api proxy"]
-        API["FastAPI / Uvicorn<br/>app/main.py"]
-        subgraph Data
-            PG[("PostgreSQL 16 + PostGIS<br/>point · viewpoint · photo")]
-            MV[("Media volume<br/>photos/ · thumbs/ · references/")]
-        end
-        NG -->|"/api, /docs"| API
-        API --> PG
-        API --> MV
-    end
-
-    UI -->|"HTTPS, same origin"| NG
-    SW -.->|"cache-first tiles"| OSM["OpenStreetMap / OpenTopoMap"]
+flowchart TD
+    UI["React 19 PWA<br/>Ant Design · MapLibre · kk/ru/en"] -->|"HTTPS, same origin"| NG["nginx 1.27<br/>static files + /api proxy"]
+    NG -->|"/api, /docs"| API["FastAPI / Uvicorn"]
+    API --> PG[("PostgreSQL 16 + PostGIS")]
+    API --> MV[("Media volume")]
+    UI -. "queued uploads" .-> Q[("IndexedDB")]
+    UI -. "cached shell, API, media" .-> SW["Service worker"]
+    SW -. "cache-first tiles" .-> OSM["OSM / OpenTopoMap"]
 ```
+
+The browser owns the capture pipeline, the IndexedDB upload queue and the
+service-worker caches. nginx is the only public origin; FastAPI owns validation,
+image processing, persistence and exports.
 
 ## Frontend
 

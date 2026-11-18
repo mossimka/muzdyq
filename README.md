@@ -1,4 +1,6 @@
-# Muzdyq · Мұздық · Мұздық
+# Muzdyq · Мұздық
+
+**English** · [Русский](docs/README.ru.md) · [Қазақша](docs/README.kk.md) · [简体中文](docs/README.zh-CN.md) · [Español](docs/README.es.md) · [Français](docs/README.fr.md) · [Deutsch](docs/README.de.md) · [Português (BR)](docs/README.pt-BR.md) · [All translations](docs/README.md)
 
 **An account-free, open citizen-science photo time series for the glaciers and
 water bodies of the Ile Alatau (Zailiysky Alatau), Kazakhstan.**
@@ -133,28 +135,17 @@ npm run build          # -> frontend/dist
 ## Architecture
 
 ```mermaid
-flowchart LR
-    subgraph Browser
-        PWA["React PWA<br/>Ant Design + MapLibre"]
-        IDB[("IndexedDB<br/>upload queue")]
-        SW["Service worker<br/>shell · tiles · media"]
-        PWA <--> IDB
-        PWA <--> SW
-    end
-
-    subgraph Compose
-        NG["nginx<br/>static + reverse proxy"]
-        API["FastAPI<br/>no accounts"]
-        DB[("PostgreSQL + PostGIS<br/>points, viewpoints, photos")]
-        FS[("Media volume<br/>originals · thumbs")]
-        API <--> DB
-        API <--> FS
-    end
-
-    PWA -- "same-origin /api" --> NG
-    NG --> API
-    PWA -. "OSM / OpenTopoMap tiles" .-> Tiles["Tile servers"]
+flowchart TD
+    PWA["React PWA<br/>offline queue + service worker"] --> NG["nginx<br/>static files + /api proxy"]
+    NG --> API["FastAPI<br/>no accounts"]
+    API --> DB[("PostgreSQL + PostGIS")]
+    API --> MEDIA[("Media volume")]
+    PWA -. "map tiles" .-> TILES["OSM / OpenTopoMap"]
 ```
+
+The browser owns the offline queue (IndexedDB) and the service-worker caches;
+nginx is the only public origin. The API talks to PostGIS for points, viewpoints
+and metadata, and to the media volume for EXIF-free originals and thumbnails.
 
 Repository layout:
 
